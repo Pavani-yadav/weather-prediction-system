@@ -1,0 +1,17 @@
+{
+  "name": "Yathin Meteora — Real-Time Weather Prediction",
+  "short_name": "Yathin Meteora",
+  "description": "Real-time weather prediction platform using Random Forest ML. By Yathin Infotech.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

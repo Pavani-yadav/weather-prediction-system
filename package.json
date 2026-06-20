@@ -1,0 +1,19 @@
+{
+  "name": "yathin-meteora-vanilla",
+  "version": "1.0.0",
+  "description": "Real-Time Weather Prediction Platform — HTML + CSS + JS + Node.js + Express + MongoDB + Random Forest",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "train": "python scripts/train_random_forest.py"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7"
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yathin Meteora — Real-Time Weather Prediction Platform by Yathin Infotech" />
+  <title>Yathin Meteora — Real-Time Weather Prediction</title>
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body data-theme="light">
+  <!-- App root -->
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar glass" id="sidebar">
+      <div class="brand">
+        <div class="logo-wrapper">
+          <div class="logo-glow"></div>
+          <div class="logo-container">
+            <img src="/yathin-infotech-logo.jpg" alt="Yathin Infotech logo" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Yathin <span class="gradient-text">Meteora</span></div>
+          <div class="brand-sub">by Yathin Infotech</div>
+          <div class="brand-tag">INNOVATE · INTEGRATE · ELEVATE</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Sidebar">
+        <button class="nav-pill active" data-view="dashboard"><span class="icon">📊</span> Dashboard</button>
+        <button class="nav-pill" data-view="prediction"><span class="icon">🧠</span> Prediction</button>
+        <button class="nav-pill" data-view="forecast"><span class="icon">📈</span> Forecast Analytics</button>
+        <button class="nav-pill" data-view="historical"><span class="icon">📜</span> Historical Data</button>
+        <button class="nav-pill" data-view="alerts"><span class="icon">🔔</span> Weather Alerts</button>
+        <button class="nav-pill" data-view="reports"><span class="icon">📄</span> Reports</button>
+        <button class="nav-pill" data-view="settings"><span class="icon">⚙️</span> Settings</button>
+      </nav>
+
+      <div class="sidebar-footer glass-strong">
+        <div class="powered-by">⚡ Powered by Random Forest</div>
+        <div class="powered-sub">6 features · 6 classes · 100 trees</div>
+        <div class="powered-sub">Python scikit-learn + joblib</div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main">
+      <!-- Topbar -->
+      <header class="topbar glass-strong">
+        <div class="mobile-menu" id="mobileMenuBtn" aria-label="Open menu">☰</div>
+        <div class="clock">
+          <div id="clockTime" class="clock-time">--:--:--</div>
+          <div id="clockDate" class="clock-date">---</div>
+        </div>
+        <div class="live-badge" id="liveBadge" style="display:none;">
+          <span class="live-dot"></span> LIVE
+        </div>
+        <div class="search-wrapper">
+          <input type="text" id="citySearch" placeholder="Search city..." class="search-input" autocomplete="off" />
+          <div class="search-dropdown glass-strong" id="searchDropdown"></div>
+          <button id="voiceBtn" class="icon-btn" title="Voice search">🎤</button>
+          <button id="locationBtn" class="icon-btn" title="Use my location">📍</button>
+        </div>
+        <button id="ttsBtn" class="icon-btn" title="Read weather aloud">🔊</button>
+        <button id="themeBtn" class="icon-btn" title="Toggle theme">🌙</button>
+        <div class="profile" title="BP Bandi Pavani" id="profileBtn" style="cursor: pointer;">
+          <div class="avatar">BP</div>
+        </div>
+      </header>
+
+      <!-- Views container -->
+      <main class="content" id="content">
+        <!-- Views are rendered here by JS -->
+        <div class="loading">Loading...</div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="/js/api.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
