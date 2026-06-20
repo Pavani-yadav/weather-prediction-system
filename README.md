@@ -174,7 +174,7 @@ yathin-meteora-vanilla/
 ## 👤 Default Admin User
 
 - **Name**: BP Bandi Pavani
-- **Email**: admin@yathinmeteora.app
+- **Email**: bandipavani2004@gmail.com
 - **Password**: meteora2026
 - (Auto-created on first API call)
 
