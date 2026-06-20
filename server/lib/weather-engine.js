@@ -38,7 +38,12 @@ function mapWeatherCode(code) {
  */
 async function geocode(cityName) {
   const url = `${GEOCODING_URL}?name=${encodeURIComponent(cityName)}&count=1&language=en&format=json`;
-  const res = await fetch(url);
+ const res = await fetch(url, {
+  headers: {
+    'User-Agent': 'Yathin-Meteora/1.0',
+    'Accept': 'application/json'
+  }
+});
   if (!res.ok) throw new Error(`Geocoding API ${res.status}`);
   const d = await res.json();
   const hit = d.results?.[0];
@@ -69,7 +74,12 @@ async function fetchCurrentWeather(city) {
     timezone: city.tz || 'auto',
     forecast_days: '1',
   });
-  const res = await fetch(`${FORECAST_URL}?${params}`);
+  const res = await fetch(`${FORECAST_URL}?${params}`, {
+  headers: {
+    'User-Agent': 'Yathin-Meteora/1.0',
+    'Accept': 'application/json'
+  }
+});
   if (!res.ok) throw new Error(`Forecast API ${res.status}`);
   const d = await res.json();
   const c = d.current || {};
